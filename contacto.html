@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Alexandra's Communication</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f4; margin: 0; padding: 0; }
+        .contacto-container { max-width: 1000px; margin: 50px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-top: 10px solid #1b5e20; }
+        h1 { color: #1b5e20; text-align: center; margin-bottom: 30px; }
+        .grid-contacto { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .info-col h2 { color: #2e7d32; font-size: 1.4em; }
+        .mapa-container { border-radius: 10px; overflow: hidden; border: 1px solid #ddd; }
+        
+        /* Estilos del Formulario */
+        label { display: block; margin-top: 15px; font-weight: bold; color: #1b5e20; }
+        input, textarea { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        .btn-enviar { background: #2e7d32; color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 20px; font-size: 1em; }
+        .btn-enviar:hover { background: #1b5e20; }
+        
+        .whatsapp-link { display: inline-block; background: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; }
+        .enlaces-rapidos { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; }
+        .enlaces-rapidos a { color: #1b5e20; text-decoration: none; margin-right: 15px; font-size: 0.9em; font-weight: bold; }
+        
+        @media (max-width: 768px) { .grid-contacto { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <div class="contacto-container">
+        <h1> Contacto Alexandra's Communication</h1>
+        
+        <div class="grid-contacto">
+            <!-- Columna de Información y Formulario -->
+            <div class="info-col">
+                <h2>Envíanos un mensaje</h2>
+                <form onsubmit="procesarEnvio(event)">
+                    <label>Nombre Completo</label>
+                    <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+
+                    <label>Correo Electrónico</label>
+                    <input type="email" id="email" placeholder="tu@correo.com" required>
+
+                    <label>Motivo del contacto</label>
+                    <textarea id="mensaje" rows="4" placeholder="¿En qué podemos ayudarte o qué noticia quieres reportar?" required></textarea>
+
+                    <button type="submit" class="btn-enviar">Enviar Información</button>
+                </form>
+
+                <div style="margin-top: 25px;">
+                    <p><strong> Teléfono:</strong> +52 933 759 4367</p>
+                    <a href="https://wa.me" class="whatsapp-link" target="_blank"> WhatsApp Directo</a>
+                </div>
+            </div>
+
+            <!-- Columna de Mapa y Ubicación -->
+            <div class="mapa-col">
+                <h2>Ubicación en Paraíso</h2>
+                <p>Avenida Quintín Arauz s/n, Centro, C.P. 86600. Paraíso, Tabasco.</p>
+                <img src="img/contacto.png" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px;">
+
+                <div class="enlaces-rapidos">
+                    <a href="preguntas.html">Preguntas Frecuentes</a>
+                    <a href="soporte.html">Soporte Técnico</a>
+                    <a href="privacidad.html">Privacidad</a>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" style="color: #1b5e20; text-decoration: none; font-weight: bold;">← Volver al Portal de Noticias</a>
+        </div>
+    </div>
+
+    <script>
+        function procesarEnvio(event) {
+            event.preventDefault();
+            alert('¡Gracias! Tu reporte o duda ha sido enviada con éxito al equipo de Alexandra\'s Communication en Paraíso.');
+            event.target.reset();
+        }
+    </script>
+
+</body>
+</html>

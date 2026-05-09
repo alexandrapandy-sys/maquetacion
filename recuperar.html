@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recuperar Contraseña - Alexandra's Communication</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f7f4; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .box { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 8px solid #1b5e20; text-align: center; }
+        input { width: 90%; padding: 10px; margin: 20px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #2e7d32; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Recuperar Acceso</h2>
+        <p>Introduce tu correo para enviarte las instrucciones.</p>
+        <form onsubmit="alert('Se ha enviado un enlace a tu correo.'); event.preventDefault();">
+            <input type="email" placeholder="tu@correo.com" required>
+            <br>
+            <button type="submit">Enviar Instrucciones</button>
+        </form>
+        <br>
+        <a href="login.html" style="color: #1b5e20;">Volver al Login</a>
+    </div>
+</body>
+</html>
