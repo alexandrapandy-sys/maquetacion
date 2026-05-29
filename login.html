@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimentos transgénicos</title>
+        <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos_maquetacion.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+</head>
+    <style>
+    
+        .main-login-wrapper {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 80px); /* Ajusta el espacio restando la cabecera */
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .login-container { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            width: 100%; 
+            max-width: 400px; 
+            border-top: 10px solid #1b5e20; 
+        }
+        .login-container h1 { 
+            color: #1b5e20; 
+            text-align: center; 
+            margin-bottom: 10px; 
+            font-size: 1.8em; 
+            font-weight: 600;
+        }
+        .login-container p { 
+            text-align: center; 
+            color: #666; 
+            margin-bottom: 30px; 
+            font-size: 0.9em; 
+        }
+        .login-container label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: bold; 
+            color: #1b5e20; 
+        }
+        .login-container input { 
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 20px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            box-sizing: border-box; 
+            font-size: 1em; 
+            font-family: 'Poppins', sans-serif;
+        }
+        .login-container .btn-submit-form { 
+            width: 100%; 
+            background-color: #2e7d32; 
+            color: white; 
+            padding: 14px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 1.1em; 
+            font-weight: bold; 
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.3s;
+        }
+        .login-container .btn-submit-form:hover { 
+            background-color: #1b5e20; 
+        }
+        .opciones-extra { 
+            display: flex; 
+            justify-content: space-between; 
+            margin-top: 15px; 
+            font-size: 0.85em; 
+        }
+        .opciones-extra a { 
+            color: #1b5e20; 
+            text-decoration: none; 
+        }
+        .opciones-extra a:hover {
+            text-decoration: underline;
+        }
+        .regresar { 
+            display: block; 
+            text-align: center; 
+            margin-top: 30px; 
+            text-decoration: none; 
+            color: #888; 
+            font-size: 0.9em; 
+        }
+        .regresar:hover {
+            color: #1b5e20;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+            
+                <a href="index.html">
+                    <img src="img/logo.png" alt="coloca tu logo aquí">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fi fi-bs-login-lock"></i>inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#"><i class="fi fi-sr-customer-care"></i>servicios ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="talleres.html">talleres de cocina</a></li>
+                            <li><a href="planificacion.html">planificación de menús</a></li>
+                            <li><a href="despensa.html">auditoría de despensa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="asesorias.html">asesorías personalizadas</a></li>
+                    <li><a href="contacto.html">contacto</a></li>
+                    <li><a href="login.html" class="btn-login">login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <div class="main-login-wrapper">
+        <div class="login-container">
+            <h1>Bienvenido</h1>
+            <p>Portal de Noticias - Alexandra's Communication</p>
+            
+            <form onsubmit="validarAcceso(event)">
+                <label>Correo electrónico o Usuario</label>
+                <input type="text" id="usuario" placeholder="usuario@correo.com" required>
+
+                <label>Contraseña</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+
+                <button type="submit" class="btn-submit-form">Ingresar al Portal</button>
+            </form>
+
+            <div class="opciones-extra">
+                <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
+                <a href="registrarse.html">Registrarse</a>
+            </div>
+
+            <a href="index.html" class="regresar">← Volver al Inicio</a>
+        </div>
+    </div>
+
+    <script>
+        function validarAcceso(event) {
+            event.preventDefault();
+            const user = document.getElementById('usuario').value;
+            // Simulación de acceso
+            alert('Iniciando sesión para: ' + user + '. Bienvenido al sistema de Alexandra\'s Communication.');
+            window.location.href = "index.html"; //
+        }
+    </script>
+
+ <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p>📍 Avenida Quintín Arauz s/n, Centro</p>
+                    <p>📞 +52 933 759 4367</p>
+                    <p>✉️ alexandras.communication@gmail.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Ubicación</h4>
+                    <p>Paraíso, Tabasco</p>
+                    <p>México, C.P. 86600</p>
+                    <a href="https://www.google.com/maps/place/Quintin+Arauz,+86608+Para%C3%ADso,+Tabasco/@18.3882395,-93.2229094,16z/data=!3m1!4b1!4m6!3m5!1s0x85ee8cd8046d44b1:0xa1465b4824450389!8m2!3d18.3894222!4d-93.2162634!16s%2Fg%2F1thmfrpp?authuser=0&entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D">Ver en Google Maps</a>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7572.203074441786!2d-93.21775955!3d18.3882294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ee8cd8046d44b1%3A0xa1465b4824450389!2sQuintin%20Arauz%2C%2086608%20Para%C3%ADso%2C%20Tabasco!5e0!3m2!1sen!2smx!4v1780104830603!5m2!1sen!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+                        <li><a href="privacidad.html">Aviso de Privacidad</a></li>
+                        <li><a href="soporte.html">Soporte al Cliente</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Alexandra Pandy Pérez. 3ro."D". Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
